@@ -1,0 +1,100 @@
+html {
+    width: 100%;
+    font-size: 100%;
+    box-sizing: border-box;
+    // overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    line-height: 28px;
+    font-size: $font-med;
+    color: $black;
+    font-weight: 400;
+}
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 135px;
+    padding-right: 135px;
+}
+
+h1 {
+    margin: 0;
+    color: #182327;
+    font-family: Sentient;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 76px;
+}
+
+h2 {
+    width: 570px;
+    color: #182327;
+    font-family: Sentient;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px;
+}
+
+h4 {
+    color: #182327;
+
+    /* H4 */
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* 150% */
+}
+
+section {
+
+    overflow: hidden;
+}
+
+//flexbox
+.flex {
+    display: flex;
+}
+
+.flex-jc-sb {
+    justify-content: space-between;
+}
+
+.flex-ai-c {
+    align-items: center;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+
+//visibility
+.hide-for-mobile {
+    @include breakpoints-down(medium) {
+        display: none;
+
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoints-up(large) {
+        display: none;
+    }
+}

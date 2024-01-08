@@ -1,0 +1,15 @@
+$breakpoints-up: ("medium":"375px","large":"768px","xlarge":"992px"); 
+$breakpoints-down: ("small":"374px","medium":"767px","large":"991px");
+
+@mixin breakpoints-up ($size){ //chieu rong toi thieu
+    @media (min-width: map-get($breakpoints-up,$size)){
+        @content;
+    }
+}
+
+@mixin breakpoints-down ($size){//chieu rong toi da
+    @media (max-width: map-get($breakpoints-down,$size)){
+        @content;
+    }
+}
+
